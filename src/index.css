@@ -1,3 +1,39 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
 body{
     background-color: #1e1f1f;
+    font-family: "Lato", sans-serif;    
+}
+
+footer p{    
+    margin: 0;    
+}
+footer a{
+    text-decoration: none;
+    font-weight: bold;
+    color: whitesmoke;
+}
+footer{
+    background-color: rgb(26, 26, 26);
+    color: whitesmoke;
+    font-size: 20px;
+    display: flex;    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    font-family: "Lato", sans-serif;
+    margin-top: 100px;
+}
+.social{
+    font-size: 30px;    
+    margin-top: 12px;
+}
+.info-footer{
+    margin-bottom: 16px;
 }

@@ -4,6 +4,7 @@ import Formulario from "./components/Formulario";
 import Resultado from "./components/Resultado";
 import Spinner from "./components/Spinner";
 import ImagenCripto from "./img/imagen-criptos.png";
+import Footer from "./components/Footer";
 
 const Contenedor = styled.div`
   max-width: 900px;
@@ -65,15 +66,18 @@ function App() {
   }, [monedas]);
 
   return (
-    <Contenedor>
-      <Imagen src={ImagenCripto} alt="Imagen Criptomonedas" />
-      <div>
-        <Heading>Cotiza criptomonedas al instante</Heading>
-        <Formulario setMonedas={setMonedas} />
-        {cargando && <Spinner />}
-        {cotizacion.PRICE && <Resultado cotizacion={cotizacion} />}
-      </div>
-    </Contenedor>
+    <>
+      <Contenedor>
+        <Imagen src={ImagenCripto} alt="Imagen Criptomonedas" />
+        <div>
+          <Heading>Cotiza criptomonedas al instante</Heading>
+          <Formulario setMonedas={setMonedas} />
+          {cargando && <Spinner />}
+          {cotizacion.PRICE && <Resultado cotizacion={cotizacion} />}
+        </div>
+      </Contenedor>
+      <Footer />
+    </>
   );
 }
 
